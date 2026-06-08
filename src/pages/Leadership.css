@@ -1,0 +1,92 @@
+.leadership-page { padding: 2.5rem 0 4rem; display:flex; flex-direction:column; gap:0; }
+.ldp-section { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
+.ldp-section:last-child { border-bottom: none; }
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+}
+.committee-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.committee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+}
+.cc-avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 0.3rem;
+}
+.cc-role-chip {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+}
+.cc-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:700; color:var(--ink); }
+.cc-nat  { font-size:0.72rem; color:var(--muted); }
+.cc-desc { font-size:0.8rem; color:var(--muted); line-height:1.55; text-align:center; flex:1; }
+.cc-footer { margin-top: auto; }
+.cc-date { font-size:0.68rem; color:var(--muted); border:1px solid var(--border); padding:0.2rem 0.6rem; border-radius:4px; }
+
+.gov-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.gov-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--purple);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+}
+.gov-icon  { font-size:1.4rem; margin-bottom:0.4rem; }
+.gov-title { font-weight:700; font-size:0.95rem; color:var(--ink); margin-bottom:0.35rem; }
+.gov-desc  { font-size:0.83rem; color:var(--muted); line-height:1.6; }
+
+.dsa-box {
+  display: grid;
+  grid-template-columns: auto 1fr 1.5fr;
+  gap: 1.5rem;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  margin-top: 1.2rem;
+}
+.dsa-icon { font-size:2.2rem; }
+.dsa-lbl  { font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-bottom:2px; }
+.dsa-name { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:700; color:var(--ink); }
+.dsa-addr { font-size:0.78rem; color:var(--muted); margin-top:2px; }
+.dsa-note { font-size:0.82rem; color:var(--muted); line-height:1.6; border-left:2px solid var(--border); padding-left:1rem; }
+
+@media (max-width: 900px) {
+  .committee-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px) {
+  .committee-grid { grid-template-columns: 1fr; }
+  .gov-grid { grid-template-columns: 1fr; }
+  .dsa-box  { grid-template-columns: 1fr; }
+}
